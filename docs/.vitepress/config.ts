@@ -1,11 +1,11 @@
 import { defineConfig } from 'vitepress'
 
 export default defineConfig({
+  base: "/yaosaju-party-docs/",
   title: "摇骰聚会",
   description: "重庆秀天文化传媒｜一机多玩线下聚会微信小程序，聚餐团建喝酒游戏集合",
 
   head: [
-    // 增加?v=1 版本戳，干掉浏览器缓存
     ['link', { rel: 'icon', type: 'image/png', href: '/favicon.png?v=1' }],
     ['link', { rel: 'apple-touch-icon', href: '/favicon.png?v=1' }]
   ],
