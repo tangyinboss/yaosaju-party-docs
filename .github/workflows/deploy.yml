@@ -22,13 +22,12 @@ jobs:
       - name: 配置Node环境
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: npm
+          node-version: 22
 
       - name: 安装依赖
-        run: npm ci
+        run: npm install
 
-      - name: 打包文档
+      - name: 打包静态文档
         run: npm run build
 
       - name: 上传打包产物
@@ -43,6 +42,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      - name: 发布到Pages
+      - name: 发布站点
         id: deploy
         uses: actions/deploy-pages@v4
